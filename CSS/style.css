@@ -1,0 +1,69 @@
+/* Dự án: Thảo thiện Garden
+Ngày tạo: 03/07/2022
+Người tạo: Vũ Xuân Phát
+Version: 1.0 */
+
+/* ///Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-size: 16px;
+    color: #999;
+    position: relative;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* HEADER */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header__bar{
+    background-color: transparent;
+}
+.header__bar .nav-link{
+    color: #ffffff;
+    margin-right: 20px;
+}
+.header__bar .navbar-nav .nav-item .nav-menu::after{
+    display: block;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-image: linear-gradient(to right, #3BA146, #8FC43E);
+    transition: all 0.5s;
+    z-index: 101;
+}
+.header__bar .navbar-nav .nav-item .nav-menu:hover::after{
+    width: 100%;
+}
+/* CAROUSEL */
+.Mycarousel .carousel-item img{
+    height: 100vh;
+}
+.carousel-item{
+    position: relative;
+}
+.carousel-inner .carousel__overlay{
+background-color: rgba(0,0,0 , 0.5);
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+}
+
