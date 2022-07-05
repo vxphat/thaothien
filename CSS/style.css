@@ -13,6 +13,7 @@ html, body{
     font-size: 16px;
     color: #999;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li{
@@ -30,23 +31,21 @@ header{
     left: 0;
     width: 100%;
     z-index: 100;
-}
-.header__bar{
-    background-color: transparent;
+    background-color: #ffffff
 }
 .header__bar .nav-link{
-    color: #ffffff;
-    margin-right: 20px;
+    color: #3BA146;
+    margin-right: 15px;
+    font-size: 16px;
 }
 .header__bar .navbar-nav .nav-item .nav-menu::after{
+    content: "";
     display: block;
-    top: 0;
-    left: 0;
     height: 1px;
     width: 0;
     background-image: linear-gradient(to right, #3BA146, #8FC43E);
     transition: all 0.5s;
-    z-index: 101;
+    margin-top: 5px;
 }
 .header__bar .navbar-nav .nav-item .nav-menu:hover::after{
     width: 100%;
@@ -59,11 +58,22 @@ header{
     position: relative;
 }
 .carousel-inner .carousel__overlay{
-background-color: rgba(0,0,0 , 0.5);
+background: linear-gradient(to top, rgba(59, 161, 70, 0.8), rgba(143, 196, 62, 0.8));
 position: absolute;
 top: 0;
 left: 0;
 height: 100%;
 width: 100%;
+}
+.carousel__caption{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%,-50%);
+    z-index: 101;
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
 }
 
