@@ -13,7 +13,7 @@ html, body{
     font-size: 16px;
     color: #999;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
 }
 
 li{
@@ -65,7 +65,7 @@ left: 0;
 height: 100%;
 width: 100%;
 }
-.carousel__caption{
+.carousel__caption h1{
     position: absolute;
     top: 50%;
     left: 30%;
@@ -73,7 +73,9 @@ width: 100%;
     z-index: 101;
     color: #ffffff;
     font-size: 100px;
-    font-weight: 900;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
-
+.carousel__caption span{
+    font-weight: 200;
+    font-size: 70px;
+}
