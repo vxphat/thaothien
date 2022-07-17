@@ -34,8 +34,8 @@ header{
     background-color: #ffffff
 }
 .header__bar .nav-link{
-    color: #3BA146;
-    margin-right: 15px;
+    color: #F85959;
+    margin-right: 11px;
     font-size: 16px;
 }
 .header__bar .navbar-nav .nav-item .nav-menu::after{
