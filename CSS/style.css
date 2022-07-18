@@ -13,7 +13,7 @@ html, body{
     font-size: 16px;
     color: #999;
     position: relative;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 li{
@@ -26,11 +26,6 @@ a{
 
 /* HEADER */
 header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
     background-color: #ffffff
 }
 .header__bar .nav-link{
@@ -83,4 +78,102 @@ width: 100%;
 video{
     width: 100%;
     height: 60%;
+}
+
+/* HOTEL */
+.hotel{
+    margin-top: 50px;
+}
+
+.hotel .container-fluid{
+    width: 95%;
+}
+.hotel__destination{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 0 25px;
+}
+.hotel__destination .card-header img{
+    width: 100%;
+    height: 200px;
+}
+.hotel__destination .card-header{
+    background: transparent;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.hotel__destination .card-footer{
+    background: transparent;
+    padding: 0;
+}
+.hotel .card-header .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 8px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.hotel .hotel__item:hover .icon{
+    opacity: 1;
+}
+.hotel__item .card-body{
+    padding: 20px 15px;
+    font-size: 16px;
+    border-left: 1px solid rgba(153, 153, 153, 0.2);
+    border-right: 1px solid rgba(153, 153, 153, 0.2);
+}
+
+.hotel__item .card-body .hotel__title{
+    display: flex;
+    justify-content: space-between;
+}
+.hotel__item .card-body .hotel__title h5{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.hotel__item .card-body .hotel__title p{
+    color: #F85959;
+    font-weight: 600;
+}
+.hotel__item .card-footer{
+    border: none;
+}
+.hotel__item{
+    box-shadow: 0 2px 20px rgb(153 153 153 / 25%);
+}
+.hotel__item hr{
+    width: 90%;
+    margin: auto;
+}
+.hotel__item .card-footer .footer-bot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 15px;
+    align-items: center;
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    border-top: none;
+}
+.hotel__item .card-footer .footer-bot .btn-hotel{
+    padding: 4px 8px;
+    background-color: #8FC43E;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.hotel__item .card-footer .footer-bot .btn-hotel:hover{
+    text-decoration: none;
+    background-color: #3BA146;
 }
