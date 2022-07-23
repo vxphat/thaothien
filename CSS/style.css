@@ -1,113 +1,131 @@
-/* Dự án: Thảo thiện Garden
-Ngày tạo: 03/07/2022
-Người tạo: Vũ Xuân Phát
-Version: 1.0 */
+/* 
+    Dự án: Thảo thiện Garden
+    Ngày tạo: 03/07/2022
+    Người tạo: Vũ Xuân Phát, Lưu Minh Tiến
+    Version: 1.0 
+*/
 
-/* ///Global */
-*{
+/*
+=============================================
+                ROOT VARIALBES
+=============================================
+*/
+:root {
+    --color-primary: #F85959;
+
+    --color-white: #fff;
+}
+
+/*
+=============================================
+                    GLOBAL
+=============================================
+*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     font-size: 16px;
     color: #999;
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* HEADER */
-header{
-    background-color: #ffffff
-}
-.header__bar .nav-link{
-    color: #F85959;
-    margin-right: 11px;
-    font-size: 16px;
-}
-.header__bar .navbar-nav .nav-item .nav-menu::after{
-    content: "";
-    display: block;
-    height: 1px;
-    width: 0;
-    background-image: linear-gradient(to right, #3BA146, #8FC43E);
-    transition: all 0.5s;
-    margin-top: 5px;
-}
-.header__bar .navbar-nav .nav-item .nav-menu:hover::after{
-    width: 100%;
-}
-/* CAROUSEL */
-.Mycarousel .carousel-item img{
-    height: 100vh;
-}
-.carousel-item{
-    position: relative;
-}
-.carousel-inner .carousel__overlay{
-background: linear-gradient(to top, rgba(59, 161, 70, 0.8), rgba(143, 196, 62, 0.8));
-position: absolute;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-}
-.carousel__caption h1{
+header {
     position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-30%,-50%);
-    z-index: 101;
-    color: #ffffff;
-    font-size: 100px;
-    font-weight: 800;
-}
-.carousel__caption span{
-    font-weight: 200;
-    font-size: 70px;
-}
+    top: 0;
+    left: 0;
 
-video{
     width: 100%;
-    height: 60%;
+    height: 100px;
+
+    background-color: transparent;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
+
+    z-index: 3;
 }
 
-/* HOTEL */
-.hotel{
+header .navbar-brand img {
+    width: 80px;
+}
+
+.navbar-collapse {
+    flex-grow: unset;
+}
+
+.nav-link {
+    position: relative;
+
+    font-size: 16px;
+    color: var(--color-white);
+
+    margin-right: 11px;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+.navbar-nav .nav-item:hover .nav-link::before {
+    width: 100%;
+}
+
+/* CAROUSEL */
+.carousel {
+    height: 700px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* HOTEL .hotel {
     margin-top: 50px;
-}
+} */
 
-.hotel .container-fluid{
+.hotel .container-fluid {
     width: 95%;
 }
-.hotel__destination{
+
+.hotel__destination {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0 25px;
 }
-.hotel__destination .card-header img{
+
+.hotel__destination .card-header img {
     width: 100%;
     height: 200px;
 }
-.hotel__destination .card-header{
+
+.hotel__destination .card-header {
     background: transparent;
     padding: 0;
     border: none;
     position: relative;
 }
-.hotel__destination .card-footer{
+
+.hotel__destination .card-footer {
     background: transparent;
     padding: 0;
 }
-.hotel .card-header .icon{
+
+.hotel .card-header .icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -124,40 +142,48 @@ video{
     transition: all 0.4s;
     cursor: pointer;
 }
-.hotel .hotel__item:hover .icon{
+
+.hotel .hotel__item:hover .icon {
     opacity: 1;
 }
-.hotel__item .card-body{
+
+.hotel__item .card-body {
     padding: 20px 15px;
     font-size: 16px;
     border-left: 1px solid rgba(153, 153, 153, 0.2);
     border-right: 1px solid rgba(153, 153, 153, 0.2);
 }
 
-.hotel__item .card-body .hotel__title{
+.hotel__item .card-body .hotel__title {
     display: flex;
     justify-content: space-between;
 }
-.hotel__item .card-body .hotel__title h5{
+
+.hotel__item .card-body .hotel__title h5 {
     color: black;
     font-size: 20px;
     font-weight: 600;
 }
-.hotel__item .card-body .hotel__title p{
+
+.hotel__item .card-body .hotel__title p {
     color: #F85959;
     font-weight: 600;
 }
-.hotel__item .card-footer{
+
+.hotel__item .card-footer {
     border: none;
 }
-.hotel__item{
+
+.hotel__item {
     box-shadow: 0 2px 20px rgb(153 153 153 / 25%);
 }
-.hotel__item hr{
+
+.hotel__item hr {
     width: 90%;
     margin: auto;
 }
-.hotel__item .card-footer .footer-bot{
+
+.hotel__item .card-footer .footer-bot {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -166,14 +192,22 @@ video{
     border: 1px solid rgba(153, 153, 153, 0.2);
     border-top: none;
 }
-.hotel__item .card-footer .footer-bot .btn-hotel{
+
+.hotel__item .card-footer .footer-bot .btn-hotel {
     padding: 4px 8px;
     background-color: #8FC43E;
     color: #ffffff;
     border-radius: 5px;
     transition: all 0.5s;
 }
-.hotel__item .card-footer .footer-bot .btn-hotel:hover{
+
+.hotel__item .card-footer .footer-bot .btn-hotel:hover {
     text-decoration: none;
     background-color: #3BA146;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        justify-content: space-between;
+    }
 }
